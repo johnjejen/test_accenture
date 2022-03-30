@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+</head>
+<body>
+
+      
+            <% @book.each do |book|%>
+           
+                  <div class="card" align ="center" width="200px">
+                    <h3 class="text-upercase"><%=book.title.upcase%></h3>
+                    <p align="center">    <img src="<%=book.image %>" width="200" height="100" align="center"> </p>
+                    <p class="text-secondary" >Year: <%=book.year%></p>
+                    <%= link_to "See more", "view_post/#{book.id}" %>
+                    <a href="/">BACK</a>
+                </div>
+            
+            <%end%>
+        
+
+</body>
+</html>

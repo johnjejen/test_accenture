@@ -1,0 +1,2 @@
+class StatusAccount < ApplicationRecord
+end
